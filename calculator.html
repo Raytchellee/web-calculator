@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="calculator.css">
+        <title>
+            My calculator app
+        </title>
+    </head>
+    <body id="body">
+        <div id="calc-container">
+            <table id="calc">
+                <tr>
+                    <td colspan="4">
+                        <!-- <p  id="result-screen"></p> -->
+                        <input id="result-screen" type="text" value="0" maxlength="10" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input id="AC" class="button grey" type="button" value="AC" onclick="clearScreen()" >
+                    </td>
+                    <td>
+                        <input class="button grey" type="button" value="+/-" onclick="negativeVal()" >
+                    </td>
+                    <td>
+                        <input class="button grey" type="button" value="%" onclick="percentage()" >
+                    </td>
+                    <td>
+                        <input class="button yellow" id="divide" type="button" value="/" onclick="operands('/')" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="button darkgrey" type="button" value="7" onclick="display('7')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="8" onclick="display('8')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="9" onclick="display('9')" >
+                    </td>
+                    <td>
+                        <input class="button yellow" id="multiply" type="button" value="x" onclick="operands('*')" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="button darkgrey" type="button" value="4" onclick="display('4')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="5" onclick="display('5')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="6" onclick="display('6')" >
+                    </td>
+                    <td>
+                        <input class="button yellow" id="subtract" type="button" value="-" onclick="operands('-')" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="button darkgrey" type="button" value="1" onclick="display('1')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="2" onclick="display('2')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="3" onclick="display('3')" >
+                    </td>
+                    <td>
+                        <input class="button yellow" id="add" type="button" value="+" onclick="operands('+')" >
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input class="button darkgrey" id="zero" colspan="2" type="button" value="0" onclick="display('0')" >
+                    </td>
+                    <td>
+                        <input class="button darkgrey" type="button" value="." onclick="display('.')" >
+                    </td>
+                    <td>
+                        <input class="button yellow" type="button" value="=" onclick="calculate()" >
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <script type="text/javascript" src="calculator.js"></script>
+    </body>
+</html>
